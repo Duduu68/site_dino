@@ -30,7 +30,7 @@ function alternarTarefa(event, tarefa) {
     } else {
         localStorage.setItem(tarefa, "feito");
         card.classList.add("completed");
-        mostrarPopup(`Parabéns Arthur! Você concluiu: ${card.querySelector("p").innerText} 🐉🎉`);
+        mostrarPopup(`Parabéns Arthur! Você concluiu: ${card.querySelector("p").innerText} 🦕🦖🎉`);
         dinoSound.currentTime = 0; // Reinicia o som, caso esteja tocando
         dinoSound.play();
     }
