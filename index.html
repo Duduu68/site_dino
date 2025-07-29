@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aventuras do Arthur com Dragões</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="start-screen">
+        <img src="/img/totodile.png" alt="Mascote Dragão" />
+        <h2>Bem-vindo Arthur!</h2>
+        <p>Prepare-se para ajudar os dragões!</p>
+        <button onclick="iniciarAventura()">Começar</button>
+    </div>
+
+    <header>Arthur, ajude os Dragões nas tarefas do dia!</header>
+
+    <div id="counter">Tarefas concluídas: <span id="contador">0</span>/5</div>
+
+    <div class="task" data-task="banho">
+        <img src="/img/dino_banho-Photoroom.png" alt="Dragão banho" />
+        <p>Tomar Banho</p>
+        <button onclick="alternarTarefa(event, 'banho')">Fiz isso!</button>
+    </div>
+
+    <div class="task" data-task="dentes">
+        <img src="/img/dino_dentes-Photoroom.png" alt="Dragão escova" />
+        <p>Escovar os Dentes</p>
+        <button onclick="alternarTarefa(event, 'dentes')">Fiz isso!</button>
+    </div>
+
+    <div class="task" data-task="estudar">
+        <img src="/img/dino_estudando-Photoroom.png" alt="Dragão livros" />
+        <p>Estudar</p>
+        <button onclick="alternarTarefa(event, 'estudar')">Fiz isso!</button>
+    </div>
+
+    <div class="task" data-task="comer">
+        <img src="/img/dino_comendo-Photoroom.png" alt="Dragão comida" />
+        <p>Comer</p>
+        <button onclick="alternarTarefa(event, 'comer')">Fiz isso!</button>
+    </div>
+
+    <div class="task" data-task="roupa">
+        <img src="/img/dino_roupa-Photoroom.png" alt="Dragão roupa" />
+        <p>Trocar de Roupa</p>
+        <button onclick="alternarTarefa(event, 'roupa')">Fiz isso!</button>
+    </div>
+
+    <button onclick="resetarTarefas()"
+        style="background-color:#ff6666; margin-top: 10px; max-width:400px; width: 90%; border-radius: 10px; user-select:none;">
+        Reiniciar Tarefas
+    </button>
+
+    <div id="recompensas">
+        <div id="estrelas"></div>
+        <div id="medalha">🏅 Parabéns Arthur! Você ganhou uma medalha!</div>
+    </div>
+
+    <div id="congrats">Parabéns Arthur! Você completou todas as tarefas! 🐉🎉</div>
+
+    <div id="popupMensagem"></div>
+
+    <audio id="dino-sound" src="/sounds/baby_dinosaur.mp3" preload="auto"></audio>
+
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

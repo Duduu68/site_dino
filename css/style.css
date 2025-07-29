@@ -1,0 +1,164 @@
+ body {
+      margin: 0;
+      font-family: 'Fredoka One', cursive;
+      background: linear-gradient(to bottom, #d6f5d6, #a3d9a5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #66cc66;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      user-select: none;
+    }
+
+    .task {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+      user-select: none;
+    }
+
+    .task.completed {
+      background-color: #d4fcd7;
+    }
+
+    .task:active {
+      transform: scale(0.96);
+    }
+
+    .task img {
+      width: 50%;
+      height: 50%;
+      user-select: none;
+    }
+
+    .task p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #333;
+      user-select: none;
+    }
+
+    button {
+      background-color: #66cc66;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    button:active {
+      background-color: #57b957;
+    }
+
+    #counter {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #2d572c;
+      user-select: none;
+    }
+
+    #start-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, #b4e7b4, #a1dba1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      user-select: none;
+    }
+
+    #start-screen img {
+      width: 50%;
+      margin-bottom: 20px;
+      user-select: none;
+    }
+
+    #start-screen button {
+      font-size: 1.2em;
+      padding: 12px 24px;
+      user-select: none;
+    }
+
+    #recompensas {
+      margin-top: 20px;
+      text-align: center;
+      user-select: none;
+    }
+
+    #estrelas {
+      font-size: 1.5em;
+      color: gold;
+    }
+
+    #medalha {
+      margin-top: 10px;
+      display: none;
+      font-size: 1.3em;
+    }
+
+    #congrats {
+      background-color: #ffd966;
+      color: #333;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.2em;
+      width: 90%;
+      max-width: 400px;
+      display: none;
+      user-select: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Pop-up estilizado */
+    #popupMensagem {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d4edda;
+  color: #155724;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  font-size: 1.1em;
+  display: none;
+  z-index: 9999;
+  animation: fadeInOut 4s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  10%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+}
